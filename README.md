@@ -5,3 +5,8 @@ This project demonstrates Git & GitHub workflow including:
 - Branching
 - Merging
 - Deployment
+
+
+## Feature Update
+
+This branch adds additional documentation and improvements.
