@@ -8,9 +8,20 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-^=kn+1e3qi0rxqwk*bnt1
 
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+#ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',') + [
+    'ostad-dev-ops.vercel.app',
+    'ostad-dev-ops-igxf-cwgmonn9j-kftdeebas-projects.vercel.app',
+    '.vercel.app',
+]
 
-CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', 'http://localhost:8000').split(',')
+#CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', 'http://localhost:8000').split(',')
+
+CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', 'http://localhost:8000').split(',') + [
+    'https://ostad-dev-ops.vercel.app',
+    'https://ostad-dev-ops-igxf-cwgmonn9j-kftdeebas-projects.vercel.app',
+    'https://*.vercel.app',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
